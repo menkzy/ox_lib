@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, createStyles, Text } from '@mantine/core';
+import { Box, createStyles, Text, Progress } from '@mantine/core';
 import { useNuiEvent } from '../../hooks/useNuiEvent';
 import { fetchNui } from '../../utils/fetchNui';
 import ScaleFade from '../../transitions/ScaleFade';
@@ -8,7 +8,7 @@ import type { ProgressbarProps } from '../../typings';
 const useStyles = createStyles((theme) => ({
   container: {
     width: 350,
-    height: 45,
+    height: 15,
     borderRadius: theme.radius.sm,
     backgroundColor: theme.colors.dark[5],
     overflow: 'hidden',
@@ -25,6 +25,7 @@ const useStyles = createStyles((theme) => ({
   bar: {
     height: '100%',
     backgroundColor: theme.colors[theme.primaryColor][theme.fn.primaryShade()],
+    
   },
   labelWrapper: {
     position: 'absolute',
@@ -33,6 +34,7 @@ const useStyles = createStyles((theme) => ({
     height: 45,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop:10,
   },
   label: {
     maxWidth: 350,
@@ -69,7 +71,7 @@ const Progressbar: React.FC = () => {
               className={classes.bar}
               onAnimationEnd={() => setVisible(false)}
               sx={{
-                animation: 'progress-bar linear',
+                animation: 'progress-bar ease-out',
                 animationDuration: `${duration}ms`,
               }}
             >

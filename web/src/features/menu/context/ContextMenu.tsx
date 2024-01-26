@@ -20,17 +20,19 @@ const useStyles = createStyles((theme) => ({
     right: '25%',
     width: 320,
     height: 580,
+    
   },
   header: {
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,
     gap: 6,
+    
   },
   titleContainer: {
     borderRadius: 4,
     flex: '1 85%',
-    backgroundColor: theme.colors.dark[6],
+    backgroundColor: theme.colors.dark[7],
   },
   titleText: {
     color: theme.colors.dark[0],
@@ -40,6 +42,7 @@ const useStyles = createStyles((theme) => ({
   buttonsContainer: {
     height: 560,
     overflowY: 'scroll',
+    
   },
   buttonsFlexWrapper: {
     gap: 3,

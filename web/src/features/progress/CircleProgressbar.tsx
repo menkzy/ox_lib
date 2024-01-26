@@ -91,7 +91,7 @@ const CircleProgressbar: React.FC = () => {
               sections={[{ value: 0, color: theme.primaryColor }]}
               onAnimationEnd={() => setVisible(false)}
               className={classes.progress}
-              label={<Text className={classes.value}>{value}%</Text>}
+              //label={<Text className={classes.value}>{value}%</Text>}
             />
             {label && <Text className={classes.label}>{label}</Text>}
           </Stack>

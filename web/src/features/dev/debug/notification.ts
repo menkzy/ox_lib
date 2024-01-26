@@ -6,26 +6,10 @@ export const debugCustomNotification = () => {
     {
       action: 'notify',
       data: {
-        title: 'Success',
-        description: 'Notification description',
-        type: 'success',
-        id: 'pogchamp',
-        duration: 20000,
-        style: {
-          '.description': {
-            color: 'red',
-          },
-        },
-      },
-    },
-  ]);
-  debugData<NotificationProps>([
-    {
-      action: 'notify',
-      data: {
         title: 'Error',
         description: 'Notification description',
         type: 'error',
+        duration: 2000000,
       },
     },
   ]);
@@ -37,6 +21,7 @@ export const debugCustomNotification = () => {
         description: 'Notification description',
         type: 'success',
         icon: 'microchip',
+        duration: 2000000,
       },
     },
   ]);

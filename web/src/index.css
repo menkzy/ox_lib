@@ -6,6 +6,12 @@
 @import url("https://use.typekit.net/wxh5ury.css");
 @import url("https://use.typekit.net/qgr5ebd.css");
 
+@font-face {
+  font-family: "Core Mellow W01 47 Cn Regular";
+  src: url(https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.eot);
+  src: url(https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.eot?#iefix)format("embedded-opentype"), url(https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.woff2)format("woff2"), url(https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.woff)format("woff"), url(https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.ttf)format("truetype"), url("https://db.onlinewebfonts.com/t/b7a7751de2af89b270f63655875e26d5.svg#Core Mellow W01 47 Cn Regular")format("svg")
+}
+
 html {
   color-scheme: normal !important;
 }
@@ -61,4 +67,21 @@ code {
 
 .toast-error {
   background-color: #c0392b;
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }

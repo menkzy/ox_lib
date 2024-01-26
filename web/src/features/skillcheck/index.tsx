@@ -5,12 +5,12 @@ import { fetchNui } from '../../utils/fetchNui';
 import { Box, createStyles } from '@mantine/core';
 import type { GameDifficulty, SkillCheckProps } from '../../typings';
 
-export const circleCircumference = 2 * 50 * Math.PI;
+export const circleCircumference = 20 * 500 * Math.PI;
 
 const getRandomAngle = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min;
 
 const difficultyOffsets = {
-  easy: 50,
+  easy: 1000,
   medium: 40,
   hard: 25,
 };
@@ -18,17 +18,18 @@ const difficultyOffsets = {
 const useStyles = createStyles((theme, params: { difficultyOffset: number }) => ({
   svg: {
     position: 'absolute',
-    top: '50%',
+    top: '90%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     r: 50,
     width: 500,
     height: 500,
+    fontSize: 15,
   },
   track: {
     fill: 'transparent',
     stroke: theme.colors.dark[5],
-    strokeWidth: 8,
+    strokeWidth: 10,
     r: 50,
     cx: 250,
     cy: 250,
@@ -41,8 +42,8 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
   },
   skillArea: {
     fill: 'transparent',
-    stroke: theme.fn.primaryColor(),
-    strokeWidth: 8,
+    stroke: theme.colors.blue[9],
+    strokeWidth: 10,
     r: 50,
     cx: 250,
     cy: 250,
@@ -57,7 +58,7 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
   },
   indicator: {
     stroke: 'red',
-    strokeWidth: 16,
+    strokeWidth: 25,
     fill: 'transparent',
     r: 50,
     cx: 250,
@@ -74,14 +75,14 @@ const useStyles = createStyles((theme, params: { difficultyOffset: number }) => 
   button: {
     position: 'absolute',
     left: '50%',
-    top: '50%',
+    top: '90%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: theme.colors.dark[5],
     width: 25,
     height: 25,
     textAlign: 'center',
-    borderRadius: 5,
-    fontSize: 16,
+    borderRadius: 2,
+    fontSize: 15,
     fontWeight: 500,
     display: 'flex',
     justifyContent: 'center',

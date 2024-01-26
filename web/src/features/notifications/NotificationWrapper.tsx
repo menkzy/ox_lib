@@ -9,30 +9,42 @@ import LibIcon from '../../components/LibIcon';
 
 const useStyles = createStyles((theme) => ({
   container: {
-    width: 300,
+    maxWidth: 'calc(0.092592592vh * 320);',
     height: 'fit-content',
-    backgroundColor: theme.colors.dark[6],
-    color: theme.colors.dark[0],
-    padding: 12,
-    borderRadius: theme.radius.sm,
-    fontFamily: 'Roboto',
-    boxShadow: theme.shadows.sm,
+    backgroundColor: 'rgba(36, 36, 36, 0.8)',
+    color: '#fff',
+    padding: 'calc(0.092592592vh * 5) calc(0.092592592vh * 10);',
+    borderRadius: '5px',
+    //border: '2px solid rgba(14, 14, 14, 0.2)',
+    //boxShadow: 'inset 0px 0px 72px rgba(62, 62, 62, 0.8);',
+    filter: 'drop-shadow(rgba(200, 200, 200, 0.3) 0.3px 0.3px 5px)',
+    strokeWidth: '3px'
+    
+    // border: '2px solid rgba(255, 255, 255, 0.2)',
   },
   title: {
     fontWeight: 500,
     lineHeight: 'normal',
+    fontFamily: 'Core Mellow W01 47 Cn Regular',
+    textShadow: '1px 1px 2px rgb(0, 0, 0, .5',
+    filter: 'drop-shadow(rgb(255, 0, 0) 0px 0px 3px)',
+    fontSize: '12px !important',
   },
   description: {
     fontSize: 12,
-    color: theme.colors.dark[2],
-    fontFamily: 'Roboto',
+    color: theme.colors.dark[0],
+    fontFamily: 'Core Mellow W01 47 Cn Regular',
+    textShadow: '1px 1px 2px rgb(0, 0, 0, .5',
     lineHeight: 'normal',
+    filter: 'drop-shadow(rgb(255, 0, 0) 0px 0px 3px)',
   },
   descriptionOnly: {
-    fontSize: 14,
-    color: theme.colors.dark[2],
-    fontFamily: 'Roboto',
+    fontSize: 13,
+    color: theme.colors.dark[0],
+    fontFamily: 'Core Mellow W01 47 Cn Regular',
+    textShadow: '1px 1px 2px rgb(0, 0, 0, .5',
     lineHeight: 'normal',
+    filter: 'drop-shadow(rgb(255, 0, 0) 0px 0px 3px)',
   },
 }));
 
@@ -148,12 +160,12 @@ const Notifications: React.FC = () => {
                     : position === 'top-center'
                     ? exitAnimationTop
                     : position
-                    ? exitAnimationBottom
+                    ? [exitAnimationBottom]
                     : exitAnimationRight
                 } 0.4s ease-in forwards`,
             ...data.style,
           }}
-          className={`${classes.container}`}
+          className={`${classes.container}` }
         >
           <Group noWrap spacing={12}>
             {data.icon && (
@@ -171,7 +183,7 @@ const Notifications: React.FC = () => {
                     }
                     style={{ alignSelf: !data.alignIcon || data.alignIcon === 'center' ? 'center' : 'start' }}
                     radius="xl"
-                    size={32}
+                    size={27}
                   >
                     <LibIcon icon={data.icon} fixedWidth size="lg" animation={data.iconAnimation} />
                   </Avatar>

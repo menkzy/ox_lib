@@ -29,7 +29,7 @@ const useStyles = createStyles((theme, params: { disabled?: boolean; readOnly?: 
     width: '100%',
     padding: 10,
     '&:hover': {
-      backgroundColor: params.readOnly ? theme.colors.dark[6] : undefined,
+      backgroundColor: params.readOnly ? theme.colors.dark[7] : undefined,
       cursor: params.readOnly ? 'unset' : 'pointer',
     },
     '&:active': {
